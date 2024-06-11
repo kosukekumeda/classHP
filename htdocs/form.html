@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BlogForm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="link_form">
+        <h2 class="form_title">Link Form</h2>
+        <form action="hp_create.php" method="POST">
+            <p class="link_title">Link Title：<input type="text" name="title"></p>
+            <p class="content">Content：<textarea name="content" id="content" cols="20" rows="1"></textarea></p>
+            <p class="category">Category：
+        <select name="category">
+            <option value="1">PHP</option>
+            <option value="2">Java Script</option>
+            <option value="3">CSS</option>
+            <option value="4">HTML</option>
+        </select></p>
+        <div class="public"></div>
+            <p>Post Public:
+            <input type="radio" name="publish_status" value="1" checked>Public
+            <input type="radio" name="publish_status" value="2">Private</p>
+        </div>
+            <input type="submit" class="send_name"value="Send">
+        </form>
+        <p class="form_back"><a href="index.php"class="btn-square-raised">Back</a></p>
+    </div>
+</body>
+</html>
