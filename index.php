@@ -22,7 +22,7 @@
             <ul>
                 <li><a href="#CONCEPT">CONCEPT</a></li>
                 <li><a href="#LINK">LINK</a></li>
-                <!-- <li><a href="#RECRUIT">RECRUIT</a></li> -->
+                <li><a href="#RECRUIT">RECRUIT</a></li>
             </ul>
         </nav>
     </header>

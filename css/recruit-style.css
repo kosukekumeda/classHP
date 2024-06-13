@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+:root {
+    --main-color: #212121;
+    --sub-color: #fff;
+    --accent-color: #F4E7E7;
+    --base-font-size: 20px;
+    --base-font-family: "Kiwi Maru", serif;
+}
+body {
+    font-family: var(--base-font-family);
+}
+.kiwi-maru-regular {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 370;
+    font-style: normal;
+  }
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+li {
+    list-style: none;
+}
+.site-title {
+    width: 120px;
+    padding: 0.8rem;
+}
+/* サイト全体のコンテンツ幅 */
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 2em 4%;
+    /* background: #f4f8f8; */
+}
+/* 中のコンテナのサイズ幅 */
+.container {
+    max-width: 100%;
+    background: var(--accent-color);
+    padding: 3rem;
+}
+.container .item {
+    display: flex;
+}
+.item {
+    width: 500px;
+    background: rgb(147, 145, 129);
+}
+/* セクションのタイトルと説明 */
+.section-title {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 3;
+    /* background: #fff; */
+}
+.description {
+    padding: 1rem;
+    line-height: 3;
+    text-align: center;
+    /* background: #212121; */
+}
+
+/* header=================== */
+/* ========================= */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+#header ul {
+    display: flex;
+    padding: 10px 0;
+}
+#header li {
+    margin-left: 30px;
+}
+#header li a {
+    color: var(--main-color);
+}
+
+/* responsive = */
+@media screen and (max-width: 768px) {
+    /* 768px以下の画面サイズで適用されるスタイル */
+    /* フォントサイズを小さくする (ChatGPT参考)*/
+    .site-title {
+        width: auto;
+        font-size: 1.2em;
+        padding: .5rem;
+    }
+    .navi ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navi ul li {
+        margin-left: 0;
+    }
+    .wrapper {
+        padding: 1em 2%;
+    }
+    .container {
+        padding: 2rem;
+    }
+    .section-title {
+        font-size: 1.2em;
+    }
+    .catchphrase {
+        font-size: .8em;
+        left: 10%;
+    }
+    }
+/* ============ */
+
+.navi a {
+    position: relative;
+}
+.navi a::after {
+    transform: translateY(3px);
+    
+}
+.navi a:hover::after {
+    opacity: 1;
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    background: #212121;
+    transition: all 500ms ease;
+}    
+
+/* mainvisual=============== */
+/* ========================= */
+#mainvisual {
+    margin-bottom: 80px;
+    position: relative;
+}
+#mainvisual img {
+    width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
+}
+.catchphrase {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    font: bold;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .5);
+}
+
+/* CONCEPT=================== */
+/* ========================== */
+.flex-box {
+    display: flex;
+    gap: 5%;
+    padding: 2rem;
+    background: rgb(230, 225, 194);
+}
+.bg-box .bg {
+    width: 100%;
+    background: #212121;
+    max-width: 380px;
+    position: relative;
+}
+.bg-box .text {
+    width: 100%;
+    color: var(--sub-color);
+    position: absolute;
+}
+.bg-box li {
+    text-align: center;
+}
+/* LINK====================== */
+/* ========================== */
+
+
+/* RECRUIT=================== */
+/* ========================== */
+.container2 {
+    max-width: 100%;
+    padding: 3rem;
+}
+.formbox {
+    text-align: center;
+}
+
+.label {
+    font-weight: bold;
+}
+.select {
+    display: inline-block;
+    padding: .5em;
+    border: 1px olive solid;
+}
+.select:hover {
+    background: #F4E7E7;
+}
+/* submitボタン */
+.submit {
+    display: block;
+    border: 1px #212121 solid;
+    border-radius: 10%;
+    float: right;
+}
+.submit:hover {
+    background: rgba(147, 145, 129, .5);
+}
+
+/* SEARCH==================== */
+/* ========================== */
+.job-list {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.job-list p {
+    margin: 5px 0;
+}
+.textbox {
+    display: inline-block;
+    padding: 0;
+    border: 1px olive solid;
+}
+/* ========================== */
+/*CSSボタン 
+/*共通部分は省略*/
+.namebox {
+a.btn-flat {
+    overflow: hidden;
+    padding: 1.5rem 6rem;
+    color: var(--main-color);
+    border-radius: 0;
+    background: var(--accent-color);
+  }
+  
+  a.btn-flat span {
+    position: relative;
+  }
+  
+  a.btn-flat:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-96%);
+    transform: translateX(-96%);
+    background: #eb6877;
+  }
+  
+  a.btn-flat:hover:before {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+/* footer==================== */
+/* ========================== */
+#footer {
+    padding: 2rem 0;
+    font-size: .625rem;
+    text-align: center;
+}
