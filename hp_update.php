@@ -9,4 +9,4 @@ $homePage = new Hp();
 $homePage->hpValidate($hp);
 $homePage->hpUpdate($hp);
 ?>
-<p><a href="index.php"class="btn-square-raised">Back</a></p>
+<p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>

@@ -9,6 +9,9 @@
 }
 body {
     font-family: var(--base-font-family);
+    /* text-align: center;
+    padding: 120px; */
+
 }
 
 .kiwi-maru-regular {
@@ -391,9 +394,8 @@ li {
     text-align: center;
     padding-top: 70px;
 }
-.form_back {
-    text-align: center;
-}
+
+
 
 
 /* More Detail (detail.php)==================== */
@@ -444,16 +446,15 @@ li {
     width: 24%;
     margin-left: 300px;
     padding-bottom: 20px;
-    /* margin-bottom: 10px; */
     background-color: #DADADA;
   }
   
   dd {
-    /* margin-left: 50px; */
+ 
     width: 60%;
     padding-bottom: 20px;
     background-color: #F3F3F3;
-    /* margin-bottom: 3px; */
+   
   }
 
 /* ========================== */
@@ -470,17 +471,19 @@ li {
     padding: 20px;
 }
 
-.update_back {
+.renew {
     text-align: center;
 }
 /* ========================== */
 
 /* hp.php(comment Edid)==================== */
-.renew {
-    text-align: center;
-}
 
+.delete_comment, .renew, .new {
+    text-align: center;
+    padding: 120px;
+}
 /* ========================== */
+
 
 
 #footer {
@@ -489,7 +492,7 @@ li {
     text-align: center;
 }
 
-.back-btn {
+.back_button {
     text-align: center;
     margin-bottom: 80px;
 }

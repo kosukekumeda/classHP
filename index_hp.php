@@ -6,7 +6,7 @@ require_once('hp.php');
 // ini_set('display_errors', "On");
 $hp = new Hp();
 // var_dump($dbc);
-$hpData = $hp->getAll();  
+$hpData = $hp->getLimit();  
 
 function h($s) {
     return htmlspecialchars($s, ENT_QUOTES, "UTF-8");

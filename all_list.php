@@ -74,7 +74,7 @@ function h($s) {
             <?php endforeach; ?>
         </table>
     </div>
-    <div class="back-btn">
+    <div class="back_button">
         <p><a href="index.php"class="btn-square-raised">Back</a></p>
     </div>
 

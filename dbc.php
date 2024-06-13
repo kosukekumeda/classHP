@@ -30,6 +30,19 @@ Class Dbc
     //2,データを取得する
     //引数:なし
     //返り値:取得したデータ
+    public function getLimit() {
+        $dbh = $this->dbConnect();
+        //1,sqlの準備
+        $sql = "SELECT * FROM $this->table_name limit 4";
+        //2,sqlに実行
+        $stmt = $dbh->query($sql);
+        //3,sqlの結果を受け取る
+        $result = $stmt->fetchall(PDO::FETCH_ASSOC);
+        return $result;
+        // var_dump($result);
+        $dbh = null;
+    } 
+
     public function getALL() {
         $dbh = $this->dbConnect();
         //1,sqlの準備
@@ -78,7 +91,8 @@ Class Dbc
             $stmt->bindValue(':id', (int)$id, PDO::PARAM_INT);
             //sql実行
             $stmt->execute();
-            echo 'Deleted a Link.';
+            echo '<p class="delete_comment">Deleted a Link.</p>';
+            
             
     }
 }

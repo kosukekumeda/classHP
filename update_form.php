@@ -50,6 +50,6 @@ $publish_status = $result['publish_status'];
     <input type="submit" class="send_name" value="Send">
 </div>
         </form>
-<p class="update_back"><a href="index.php"class="btn-square-raised">Back</a></p>
+<p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>
     </body>
 </html>

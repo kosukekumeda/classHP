@@ -42,7 +42,7 @@ $result = $hp->getById($_GET['id']);
        <dd><a href="<?php echo $result['content']?>"><?php echo $result['title']?></a></dd>
    </dl>
  </div>
- <p class="detail_back"><a href="index.php"class="btn-square-raised">Back</a></p>
+ <p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>
  </body>
 
 </html>

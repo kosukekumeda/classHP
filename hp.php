@@ -36,7 +36,7 @@ Class Hp extends dbc
             $stmt->execute();
             $dbh->commit();
             
-            echo 'New post is up now!';
+            echo '<p class=new>New post is up now!</p>';
         } catch(PDOException $e){
             $dbh->rollBack();
             exit($e);
@@ -60,7 +60,7 @@ Class Hp extends dbc
                 $stmt->bindvalue(':id',$hp['id'], PDO::PARAM_INT);
                 $stmt->execute();
                 $dbh->commit();
-                echo 'New post is renew!';
+                echo '<p class="renew">New post is renew!</p>';
                 // echo "<div class=renew>";
                 // echo "New post is renew!";
                 // echo "</div>";

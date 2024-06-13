@@ -62,9 +62,12 @@
     </main>
 
     <!-- PHP表示 -->
-    <?php
-    require_once('index_hp.php');
-    ?>
+
+    <section class="php">
+        <?php
+        require_once('index_hp.php');
+        ?>
+    </section>
 
     <footer id="footer">
         <p>&copy;テキストテキスト</p>
