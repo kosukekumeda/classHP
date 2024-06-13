@@ -25,28 +25,23 @@
                 <label for="job" class="label">職種:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
-                    <option value="19">開発エンジニア(SE)</option>
-                    <option value="3">プログラマー</option>
-                    <option value="4">組込みエンジニア</option>
+                    <option value="6">フロントエンドエンジニア</option>
+                    <option value="11">ネットワークエンジニア</option>
                 </select>
                 <br>
                 <label for="area" class="label">勤務地:</label>
                 <select name="area" id="area" class="select">
                     <option value="">選択してください</option>
                     <option value="1">宮崎市</option>
-                    <option value="2">都城市</option>
-                    <option value="3">延岡市</option>
                 </select>
                 <br>
                 <label for="salary" class="label">給与:</label>
                 <select name="salary" id="salary" class="select">
                     <option value="">選択してください</option>
-                    <option value="3">12万~</option>
-                    <option value="4">13万~</option>
-                    <option value="5">14万~</option>
-                    <option value="6">15万~</option>
-                    <option value="7">16万~</option>
                     <option value="8">17万~</option>
+                    <option value="9">18万~</option>
+                    <option value="10">19万~</option>
+                    <option value="11">20万~</option>
                 </select>
                 <br>
                 <button type="submit" class="submit">検索</button>
