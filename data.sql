@@ -47,11 +47,11 @@ INSERT INTO areas VALUES(null, '宮崎県', '五ヶ瀬町');
 -- 4. --2.officesテーブルを追
 CREATE TABLE offices(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NUL,
+    name VARCHAR(100) NOT NULL,
     area_id INT,
     web VARCHAR(200),
     -- foreign keyを設定
-    FOREIGN KEY (area_id) REFRENCES areas(id)
+    FOREIGN KEY (area_id) REFERENCES areas(id)
 );
 
 -- 5. --3.jobsテーブルを追加
