@@ -14,7 +14,7 @@
     <div class="container">
                     <h2 class="section-title"> - recruit - </h2>
                     <div class="description">
-                        <p>ITエンジニアの求人倍率はずばぬけて高いです。<br>今こそねらいめ！</p>
+                        <p>ITエンジニアの求人倍率はずばぬけて高いです。<br>今こそ狙い目！</p>
                     </div>
             </div>
     <div class="container2">
