@@ -61,9 +61,9 @@ CREATE TABLE jobs(
 );
 
 -- 6. --4.work-typesテーブルを追加
-CREATE TABLE workTypes(
+CREATE TABLE work_types(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    workType VARCHAR(100) NOT NULL
+    work_type VARCHAR(100) NOT NULL
 );
 
 -- 7. --5.salariesテーブルを追加
@@ -93,22 +93,22 @@ CREATE TABLE skills(
 -- 11. --9.recruitテーブルを追加
 CREATE TABLE recruits(
     id INT AUTO_INCREMENT PRIMARY KEY,
-    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     office_id INT,
     job_id INT,
-    workType_id INT,
+    work_type_id INT,
     salary_id INT,
     time_id INT,
     off_id INT,
-    skills_id INT,
+    skill_id INT,
     web VARCHAR(200),
     FOREIGN KEY (office_id) REFERENCES offices(id),
     FOREIGN KEY (job_id) REFERENCES jobs(id),
-    FOREIGN KEY (worktype_id) REFERENCES worktypes(id),
+    FOREIGN KEY (work_type_id) REFERENCES worktypes(id),
     FOREIGN KEY (salary_id) REFERENCES salaries(id),
     FOREIGN KEY (time_id) REFERENCES times(id),
     FOREIGN KEY(off_id) REFERENCES offs(id),
-    FOREIGN KEY (skills_id) REFERENCES skills(id)
+    FOREIGN KEY (skill_id) REFERENCES skills(id)
 );
 
 -- 12. スプレッドシートからMySQLにデータ追加 areaテーブル
@@ -119,8 +119,6 @@ CREATE TABLE recruits(
 -- 追加のサンプルデータを挿入
 
 -- offices テーブル
-INSERT INTO offices VALUES(NULL,'スパークジャパン',1,'http://www.sparkjapan.co.jp/');
-INSERT INTO offices VALUES(NULL,'UUUM',1,'https://www.uuum.co.jp/');
 INSERT INTO offices VALUES(NULL,'MANGO株式会社',1,'http://www.10005.co.jp/');
 INSERT INTO offices VALUES(NULL,'GMOインターネット',1,'https://www.gmo.jp/');
 INSERT INTO offices VALUES(NULL,'エイムネクスト',1,'https://www.aimnext.co.jp/');
@@ -134,6 +132,11 @@ INSERT INTO offices VALUES(NULL,'SCSKニアショアシステムズ',1,'https://
 INSERT INTO offices VALUES(NULL,'ネオキャリア',1,'https://www.neocareer-miyazaki.com/');
 INSERT INTO offices VALUES(NULL,'スパークジャパン',1,'http://www.sparkjapan.co.jp/');
 INSERT INTO offices VALUES(NULL,'UUUM',1,'https://www.uuum.co.jp/');
+INSERT INTO offices VALUES(NULL,'ワークポート',1,'https://www.workport.co.jp/');
+INSERT INTO offices VALUES(NULL,'サンネット',1,'https://www.csunnet.co.jp/');
+INSERT INTO offices VALUES(NULL,'TOEI株式会社',1,'https://www.toei-inc.jp/');
+INSERT INTO offices VALUES(NULL,'イデアルディレクションズ',1,'https://idealdirections.co.jp/');
+INSERT INTO offices VALUES(NULL,'メソッドプラス',1,'https://methodplus.co.jp/');
 
 -- jobs テーブル
 INSERT INTO jobs VALUES(NULL,'開発エンジニア(SE)');
@@ -156,11 +159,11 @@ INSERT INTO jobs VALUES(NULL,'社内SE');
 INSERT INTO jobs VALUES(NULL,'カスタマーサポート');
 
 -- workTypes テーブ
-INSERT INTO workTypes VALUES(NULL,'正社員');
-INSERT INTO workTypes VALUES(NULL,'パートタイム');
-INSERT INTO workTypes VALUES(NULL,'アルバイト');
-INSERT INTO workTypes VALUES(NULL,'契約社員');
-INSERT INTO workTypes VALUES(NULL,'派遣社員');
+INSERT INTO work_types VALUES(NULL,'正社員');
+INSERT INTO work_types VALUES(NULL,'パートタイム');
+INSERT INTO work_types VALUES(NULL,'アルバイト');
+INSERT INTO work_types VALUES(NULL,'契約社員');
+INSERT INTO work_types VALUES(NULL,'派遣社員');
 
 -- salaries テーブル
 INSERT INTO salaries VALUES(NULL,'120,000~');
@@ -178,6 +181,7 @@ INSERT INTO salaries VALUES(NULL,'230,000~');
 INSERT INTO salaries VALUES(NULL,'240,000~');
 INSERT INTO salaries VALUES(NULL,'250,000~');
 INSERT INTO salaries VALUES(NULL,'260,000~');
+INSERT INTO salaries VALUES(NULL,'未定');
 
 -- times テーブル
 INSERT INTO times VALUES(NULL,'8:00-17:00');
@@ -203,7 +207,16 @@ INSERT INTO skills VALUES(NULL,'HTML/CSS');
 INSERT INTO skills VALUES(NULL,'C#');
 INSERT INTO skills VALUES(NULL,'Python');
 INSERT INTO skills VALUES(NULL,'不問');
+INSERT INTO skills VALUES(NULL,'JS/PHP');
 
 -- recruits テーブル
 INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 11, 11, 2, 8, 3, 1, 1, 'https://www.inter-cross.com/job/show/3288');
 INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 2, 2, 2, 2, 2, 2, 2,'https://www.inter-cross.com/job/show/2117');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 14,13,1,11,3,3,3,'https://xn--pckua2a7gp15o89zb.com/jb/c050528f959a847429f20146466940d9');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 15,17,1,9,3,1,7,'https://www.inter-cross.com/job/show/3637');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 2,18,4,7,4,3,7,'https://www.inter-cross.com/job/show/3628');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 1,16,1,11,8,3,7,'https://www.inter-cross.com/job/show/4059');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 12,1,1,9,1,3,7,'https://next.rikunabi.com/viewjob/jk484c89abfbf15dc5/?list_disp_no=4&referrer_id=cp_s00700&jrtk=5-nrt1-0-1i08u0n5i2423000-484c89abfbf15dc5--SoCV6_M3_I0NBsylbh0KbzkdCdPP&leadtc=n_ichiran_adnet_ttl&betskey=SoCm6_I3_I0LDQ26Zp0LbzkdCdPP');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 16,6,1,15,3,3,7,'https://xn--pckua2a7gp15o89zb.com/jb/6abbae5b7f4a25bf9a965e71db29efd3');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 17,6,1,15,3,3,4,'https://xn--pckua2a7gp15o89zb.com/jb/03bbb551cd9a1ccad243ca5b27161f44');
+INSERT INTO recruits VALUES (NULL, CURRENT_TIMESTAMP, 18,5,1,16,8,3,2,'https://xn--pckua2a7gp15o89zb.com/jb/ld3991fb18bd4d5ffdd597c9aa2d0802a');
