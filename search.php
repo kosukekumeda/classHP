@@ -78,7 +78,7 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p><strong>勤務時間:</strong> <?= htmlspecialchars($recruit['working_hours']) ?></p>
                         <p><strong>休日:</strong> <?= htmlspecialchars($recruit['off_days']) ?></p>
                         <p><strong>スキル:</strong> <?= htmlspecialchars($recruit['required_skills']) ?></p>
-                        <p><strong>掲載情報:</strong> <a href="<?= htmlspecialchars($recruit['info_web']) ?>"></a>Recruit Page</p>
+                        <p><strong>掲載情報:</strong> <a href="<?= htmlspecialchars($recruit['info_web']) ?>">Recruit Page</a></p>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>

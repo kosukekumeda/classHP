@@ -25,8 +25,17 @@
                 <label for="job" class="label">職種:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
-                    <option value="6">フロントエンドエンジニア</option>
-                    <option value="11">ネットワークエンジニア</option>
+                    <?php
+                    foreach($pdo->query('SELECT * FROM jobs') as $row) :
+                    ?>
+
+                    <option value="<?= htmlspecialchars($recruit['jobs.job_id']) ?>">
+                        <?=  htmlspecialchars($recruit['jobs.job_name']) ?>
+                    </option>
+                                        ">
+                    <?php
+                    endforeach;
+                    ?>
                 </select>
                 <br>
                 <!-- <label for="skill" class="label">必要スキル:</label>
