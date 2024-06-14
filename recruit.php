@@ -22,11 +22,36 @@
         <h2 class="section-title">Search Form</h1>
         <div class="formbox">
             <form action="search.php" method="get">
+            <label for="salary" class="label">給与:</label>
+                <select name="salary" id="salary" class="select">
+                    <option value="">選択してください</option>
+                    <option value="9">18万~</option>
+                    <option value="11">22万~</option>
+                    <option value="13">24万~</option>
+                    <option value="15">26万~</option>
+                    <option value="16">未定</option>
+                </select>
+                <br>
+                <button type="submit" class="submit">検索</button>
+                </form>
+            <!-- <form action="search.php">
                 <label for="job" class="label">職種:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
+                    
                     <?php
-                    $pdo=new PDO('mysql:host=localhost;dbname=hp_app;charset=utf8', 'hp_user', 'kosuke1205');
+                    // データベース接続情報
+                    $host = 'localhost';
+                    $dbname = 'recruit_info';
+                    $user = 'classmate';
+                    $password = 'testpass';
+                    try {
+                        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
+                        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    } catch (PDOException $e) {
+                        die("データベース接続失敗: " . $e->getMessage());
+                    }
+                    // 
                     foreach($pdo->query('SELECT * FROM jobs') as $row) :
                     ?>
                     <option value="<?= htmlspecialchars($row['id']) ?>">
@@ -36,7 +61,10 @@
                     endforeach;
                     ?>
                 </select>
+                <button type="submit" class="submit">検索</button>
+                </form> -->
                 <br>
+                <form action="search.php">
                 <label for="skill" class="label">必要スキル:</label>
                 <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
@@ -50,16 +78,6 @@
                     <option value="8">JS/PHP</option>
                 </select>
                 <br>
-                <!-- <label for="salary" class="label">給与:</label>
-                <select name="salary" id="salary" class="select">
-                    <option value="">選択してください</option>
-                    <option value="8">17万~</option>
-                    <option value="9">18万~</option>
-                    <option value="10">19万~</option>
-                    <option value="11">20万~</option>
-                </select>
-                <br> -->
-                <button type="submit" class="submit">検索</button>
             </form>
         </div>
         <!-- ここまで -->
