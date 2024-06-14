@@ -26,7 +26,7 @@
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
                     <?php
-                    $pdo=new PDO('mysql:host=localhost;dbname=hp_app;charset=utf9', 'hp_user', 'kosuke1205');
+                    $pdo=new PDO('mysql:host=localhost;dbname=hp_app;charset=utf8', 'hp_user', 'kosuke1205');
                     foreach($pdo->query('SELECT * FROM jobs') as $row) :
                     ?>
                     <option value="<?= htmlspecialchars($row['id']) ?>">
@@ -37,28 +37,28 @@
                     ?>
                 </select>
                 <br>
-                <!-- <label for="skill" class="label">必要スキル:</label>
+                <label for="skill" class="label">必要スキル:</label>
                 <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
-                    <option value="Java">Java</option>
-                    <option value="PHP">PHP</option>
-                    <option value="JavaScript">JavaScript</option>
-                    <option value="HTML/CSS">HTML/CSS</option>
-                    <option value="C#">C#</option>
-                    <option value="Python">Python</option>
-                    <option value="不問">不問</option>
-                    <option value="JS/PHP">JS/PHP</option>
+                    <option value="1">Java</option>
+                    <option value="2">PHP</option>
+                    <option value="3">JavaScript</option>
+                    <option value="4">HTML/CSS</option>
+                    <option value="5">C#</option>
+                    <option value="6">Python</option>
+                    <option value="7">不問</option>
+                    <option value="8">JS/PHP</option>
                 </select>
                 <br>
-                <label for="salary" class="label">給与:</label>
+                <!-- <label for="salary" class="label">給与:</label>
                 <select name="salary" id="salary" class="select">
                     <option value="">選択してください</option>
                     <option value="8">17万~</option>
                     <option value="9">18万~</option>
                     <option value="10">19万~</option>
                     <option value="11">20万~</option>
-                </select> -->
-                <br>
+                </select>
+                <br> -->
                 <button type="submit" class="submit">検索</button>
             </form>
         </div>
