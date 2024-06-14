@@ -34,7 +34,7 @@
                 <br>
                 <button type="submit" class="submit">検索</button>
                 </form>
-            <!-- <form action="search.php">
+            <form action="search.php">
                 <label for="job" class="label">職種:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
@@ -62,9 +62,9 @@
                     ?>
                 </select>
                 <button type="submit" class="submit">検索</button>
-                </form> -->
+                </form>
                 <br>
-                <form action="search.php">
+                <!-- <form action="search.php">
                 <label for="skill" class="label">必要スキル:</label>
                 <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
@@ -78,7 +78,7 @@
                     <option value="8">JS/PHP</option>
                 </select>
                 <br>
-            </form>
+            </form> -->
         </div>
         <!-- ここまで -->
     </div>
