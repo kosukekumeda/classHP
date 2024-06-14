@@ -29,7 +29,7 @@
                     <option value="11">ネットワークエンジニア</option>
                 </select>
                 <br>
-                <label for="skill" class="label">必要スキル:</label>
+                <!-- <label for="skill" class="label">必要スキル:</label>
                 <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
                     <option value="Java">Java</option>
@@ -49,7 +49,7 @@
                     <option value="9">18万~</option>
                     <option value="10">19万~</option>
                     <option value="11">20万~</option>
-                </select>
+                </select> -->
                 <br>
                 <button type="submit" class="submit">検索</button>
             </form>
