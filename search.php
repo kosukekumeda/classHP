@@ -69,7 +69,7 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php else: ?>
                 <?php foreach ($recruits as $recruit): ?>
                     <div class="job-list discription">
-                        <h3><a href="#RECRUIT"><?= htmlspecialchars($recruit['job_name']) ?> at <?= htmlspecialchars($recruit['office_name']) ?></a></h2>
+                        <h3><a href="<?= htmlspecialchars($recruit['office_wibsite']) ?>"><?= htmlspecialchars($recruit['office_name']) ?></a></h2>
                         <p><strong>投稿日:</strong> <?= htmlspecialchars($recruit['create_at']) ?></p>
                         <p><strong>勤務地:</strong> <?= htmlspecialchars($recruit['address']) ?></p>
                         <p><strong>雇用形態:</strong> <?= htmlspecialchars($recruit['work_type_name']) ?></p>
