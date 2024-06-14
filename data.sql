@@ -49,7 +49,7 @@ CREATE TABLE offices(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     area_id INT,
-    web VARCHAR(200),
+    web VARCHAR(255),
     -- foreign keyを設定
     FOREIGN KEY (area_id) REFERENCES areas(id)
 );
@@ -104,7 +104,7 @@ CREATE TABLE recruits(
     web VARCHAR(200),
     FOREIGN KEY (office_id) REFERENCES offices(id),
     FOREIGN KEY (job_id) REFERENCES jobs(id),
-    FOREIGN KEY (work_type_id) REFERENCES worktypes(id),
+    FOREIGN KEY (work_type_id) REFERENCES work_types(id),
     FOREIGN KEY (salary_id) REFERENCES salaries(id),
     FOREIGN KEY (time_id) REFERENCES times(id),
     FOREIGN KEY(off_id) REFERENCES offs(id),

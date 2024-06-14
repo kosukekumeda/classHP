@@ -29,10 +29,17 @@
                     <option value="11">ネットワークエンジニア</option>
                 </select>
                 <br>
-                <label for="area" class="label">勤務地:</label>
-                <select name="area" id="area" class="select">
+                <label for="skill" class="label">必要スキル:</label>
+                <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
-                    <option value="1">宮崎市</option>
+                    <option value="Java">Java</option>
+                    <option value="PHP">PHP</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="HTML/CSS">HTML/CSS</option>
+                    <option value="C#">C#</option>
+                    <option value="Python">Python</option>
+                    <option value="不問">不問</option>
+                    <option value="JS/PHP">JS/PHP</option>
                 </select>
                 <br>
                 <label for="salary" class="label">給与:</label>
