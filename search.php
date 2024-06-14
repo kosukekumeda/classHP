@@ -22,7 +22,7 @@ $salary = isset($_GET['salary']) ? $_GET['salary'] : '';
 $query = "
     SELECT recruits.*, offices.name AS office_name, offices.web AS office_website, jobs.job AS job_name, 
            work_types.work_type AS work_type_name, salaries.salary AS salary_amount,
-           times.time AS working_hours, offs.off AS off_days, skills.skill AS required_skills,
+           times.time AS working_hours, offs.off AS off_days, skills.skill AS required_skills, recruits.web AS info_web,
            CONCAT(areas.address_level1, ' ', areas.address_level2) AS address
     FROM recruits
     JOIN offices ON recruits.office_id = offices.id
@@ -78,7 +78,7 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p><strong>勤務時間:</strong> <?= htmlspecialchars($recruit['working_hours']) ?></p>
                         <p><strong>休日:</strong> <?= htmlspecialchars($recruit['off_days']) ?></p>
                         <p><strong>スキル:</strong> <?= htmlspecialchars($recruit['required_skills']) ?></p>
-                        <p><strong>webサイト:</strong> <?= htmlspecialchars($recruit['office_website']) ?></p>
+                        <p><strong>掲載情報:</strong> <a href="<?= htmlspecialchars($recruit['info_web']) ?>"></a>Recruit Page</p>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
