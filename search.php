@@ -60,6 +60,9 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <title>求人検索結果</title>
 </head>
 <body>
@@ -70,15 +73,16 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php else: ?>
                 <?php foreach ($recruits as $recruit): ?>
                     <div class="job-list discription">
-                        <h3><a href="<?= htmlspecialchars($recruit['office_website']) ?>"><?= htmlspecialchars($recruit['office_name']) ?></a></h2>
-                        <p><strong>投稿日:</strong> <?= htmlspecialchars($recruit['create_at']) ?></p>
-                        <p><strong>勤務地:</strong> <?= htmlspecialchars($recruit['address']) ?></p>
-                        <p><strong>雇用形態:</strong> <?= htmlspecialchars($recruit['work_type_name']) ?></p>
-                        <p><strong>給与:</strong> <?= htmlspecialchars($recruit['salary_amount']) ?></p>
-                        <p><strong>勤務時間:</strong> <?= htmlspecialchars($recruit['working_hours']) ?></p>
-                        <p><strong>休日:</strong> <?= htmlspecialchars($recruit['off_days']) ?></p>
-                        <p><strong>スキル:</strong> <?= htmlspecialchars($recruit['required_skills']) ?></p>
-                        <p><strong>掲載情報:</strong> <a href="<?= htmlspecialchars($recruit['info_web']) ?>">Recruit Page</a></p>
+                        <dl class="recruit-table">
+                            <dt><a href="<?= htmlspecialchars($recruit['office_website']) ?>"><?= htmlspecialchars($recruit['office_name']) ?></a></dt>
+                            <dd><strong>勤務地:</strong> <?= htmlspecialchars($recruit['address']) ?></dd>
+                            <dd><strong>雇用形態:</strong> <?= htmlspecialchars($recruit['work_type_name']) ?></dd>
+                            <dd><strong>給与:</strong> <?= htmlspecialchars($recruit['salary_amount']) ?></dd>
+                            <dd><strong>勤務時間:</strong> <?= htmlspecialchars($recruit['working_hours']) ?></dd>
+                            <dd><strong>休日:</strong> <?= htmlspecialchars($recruit['off_days']) ?></dd>
+                            <dd><strong>スキル:</strong> <?= htmlspecialchars($recruit['required_skills']) ?></dd>
+                            <dd><strong>掲載情報:</strong> <a href="<?= htmlspecialchars($recruit['info_web']) ?>">Recruit Page</a></dd>
+                        </dl>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>

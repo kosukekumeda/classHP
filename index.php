@@ -41,6 +41,8 @@
                         <p>手を伸ばせばすぐに届く、ITエンジニア科のあなたに一番近いwebサイトを作りました</p>
                     </div>
             </div>
+
+
             <!-- <div>
                 <ul class="flex-box">
                     <li class="item">
@@ -69,13 +71,16 @@
         ?>
     </section>
 
-    <section>
+    <section id="message">
+
     <div class="formbox">
-                    <h2 class="section-title">Message Form</h2>
-                    <div class="description">
-                        <h3>背中を押してあげよう</h3>
-                        <p>6ヶ月間ともに過ごした仲間へ、感謝の気持ちをこめて<br>メッセージや、気になった求人などなど..<br>匿名で誰かの元へ届けてみませんか？</p>
-                        <div class="messagebox">
+                    <div class="container">
+                        <h2 class="section-title">Message Form</h2>
+                        <div class="description">
+                            <h3>背中を押してあげよう</h3>
+                            <p>6ヶ月間ともに過ごした仲間へ、感謝の気持ちをこめて<br>メッセージや、気になった求人などなど..<br>匿名で誰かの元へ届けてみませんか？</p>
+                            </div>
+                        <div class="messagebox container2">
                             <p>投稿するメッセージを入力してください。</p>
                             <form action="message.php" method="post">
                             <label for="friend" class="label">送信先:</label>
@@ -87,9 +92,20 @@
                                     <option value="4">櫛間</option>
                                     <option value="5">久米田</option>
                                     <option value="6">小林</option>
-                                    <option value="7">友安</option>
-                                    <option value="8">橋本</option>
-                                    <option value="9">原田</option>
+                                    <option value="7">友井</option>
+                                    <option value="8">友安</option>
+                                    <option value="9">橋本</option>
+                                    <option value="10">原田</option>
+                                    <option value="11">檜垣</option>
+                                    <option value="12">日髙</option>
+                                    <option value="13">藤本</option>
+                                    <option value="14">本部</option>
+                                    <option value="15">牧野</option>
+                                    <option value="16">牧村</option>
+                                    <option value="17">松本</option>
+                                    <option value="18">村松</option>
+                                    <option value="19">山内</option>
+                                    <option value="20">山下</option>
                                 </select>
                             <label for="message" class="label">message</label>
                             <input type="text" name="message" class="textbox">
@@ -98,18 +114,12 @@
 
                         </div>
                     </div>
-                    <div class="container2">
-                    <h2 class="section-title"> - - - - ✉Mail Box - - - - </h2>
-                    <div class="namebox">
-                    <a href="" class="btn btn-flat"><span>受信BOX</span></a>
-                    </div>
-                    </div>
             </div>
             </div>
-    </section>
+</section>
 
     <footer id="footer">
-        <p>&copy;テキストテキスト</p>
+        <p>&copy;po & kume</p>
     </footer>
 </body>
 

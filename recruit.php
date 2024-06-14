@@ -15,6 +15,7 @@
                     <h2 class="section-title"> - recruit - </h2>
                     <div class="description">
                         <p>ITエンジニアの求人倍率はずばぬけて高いです。<br>今こそ狙い目！</p>
+                        <img src="img/career2.png" alt="">
                     </div>
             </div>
     <div class="container2">
@@ -22,7 +23,7 @@
         <h2 class="section-title">Search Form</h1>
         <div class="formbox">
             <form action="search.php" method="get">
-            <label for="salary" class="label">給与:</label>
+            <label for="salary" class="label">saraly:</label>
                 <select name="salary" id="salary" class="select">
                     <option value="">選択してください</option>
                     <option value="9">18万~</option>
@@ -32,10 +33,10 @@
                     <option value="16">未定</option>
                 </select>
                 <br>
-                <button type="submit" class="submit">検索</button>
+                <button type="submit" class="submit">Search</button>
                 </form>
             <form action="search.php">
-                <label for="job" class="label">職種:</label>
+                <label for="job" class="label">job:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
                     
@@ -61,10 +62,9 @@
                     endforeach;
                     ?>
                 </select>
-                <button type="submit" class="submit">検索</button>
                 </form>
                 <br>
-                <!-- <form action="search.php">
+                <form action="search.php">
                 <label for="skill" class="label">必要スキル:</label>
                 <select name="skill" id="skill" class="select">
                     <option value="">選択してください</option>
@@ -77,8 +77,9 @@
                     <option value="7">不問</option>
                     <option value="8">JS/PHP</option>
                 </select>
+                <button type="submit" class="submit">All Search</button>
                 <br>
-            </form> -->
+            </form>
         </div>
         <!-- ここまで -->
     </div>

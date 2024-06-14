@@ -4,9 +4,12 @@
     --main-color: #212121;
     --sub-color: #fff;
     --accent-color: #F4E7E7;
+    --base-color: #aaa7a7;
+    --hover-color: rgba(147, 145, 129, .5);
     --base-font-size: 20px;
     --base-font-family: "Kiwi Maru", serif;
 }
+
 body {
     font-family: var(--base-font-family);
 }
@@ -38,7 +41,7 @@ li {
 /* 中のコンテナのサイズ幅 */
 .container {
     max-width: 100%;
-    background: var(--accent-color);
+    background: var(--base-color);
     padding: 3rem;
 }
 .container .item {
@@ -55,6 +58,7 @@ li {
     font-size: 1.5em;
     text-align: center;
     line-height: 3;
+    font-family: var(--base-font-family);
     /* background: #fff; */
 }
 .description {
@@ -62,6 +66,9 @@ li {
     line-height: 3;
     text-align: center;
     /* background: #212121; */
+}
+.description p {
+    font-family: var(--base-font-family);
 }
 
 /* header=================== */
@@ -199,20 +206,19 @@ li {
 .select {
     display: inline-block;
     padding: .5em;
-    border: 1px olive solid;
+    border: 1px var(--base-color) solid;
 }
 .select:hover {
-    background: #F4E7E7;
+    background: var(--hover-color)
 }
 /* submitボタン */
 .submit {
     display: block;
     border: 1px #212121 solid;
-    border-radius: 10%;
     float: right;
 }
 .submit:hover {
-    background: rgba(147, 145, 129, .5);
+    background: var(--hover-color);
 }
 
 /* SEARCH==================== */
@@ -231,41 +237,7 @@ li {
     padding: 0;
     border: 1px olive solid;
 }
-/* ========================== */
-/*CSSボタン 
-/*共通部分は省略*/
-.namebox {
-a.btn-flat {
-    overflow: hidden;
-    padding: 1.5rem 6rem;
-    color: var(--main-color);
-    border-radius: 0;
-    background: var(--accent-color);
-  }
-  
-  a.btn-flat span {
-    position: relative;
-  }
-  
-  a.btn-flat:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: '';
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
-    -webkit-transform: translateX(-96%);
-    transform: translateX(-96%);
-    background: #eb6877;
-  }
-  
-  a.btn-flat:hover:before {
-    -webkit-transform: translateX(0%);
-    transform: translateX(0%);
-  }
-}
+
 /* footer==================== */
 /* ========================== */
 #footer {
