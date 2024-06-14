@@ -26,6 +26,7 @@
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
                     <?php
+                    $pdo=new PDO('mysql:host=localhost;dbname=hp_app;charset=utf9', 'hp_user', 'kosuke1205');
                     foreach($pdo->query('SELECT * FROM jobs') as $row) :
                     ?>
                     <option value="<?= htmlspecialchars($row['id']) ?>">
