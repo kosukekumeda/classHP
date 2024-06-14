@@ -28,11 +28,9 @@
                     <?php
                     foreach($pdo->query('SELECT * FROM jobs') as $row) :
                     ?>
-
-                    <option value="<?= htmlspecialchars($recruit['jobs.job_id']) ?>">
-                        <?=  htmlspecialchars($recruit['jobs.job_name']) ?>
+                    <option value="<?= htmlspecialchars($row[id]) ?>">
+                        <?=  htmlspecialchars($row['name']) ?>
                     </option>
-                                        ">
                     <?php
                     endforeach;
                     ?>
