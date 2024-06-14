@@ -29,7 +29,7 @@
                     foreach($pdo->query('SELECT * FROM jobs') as $row) :
                     ?>
                     <option value="<?= htmlspecialchars($row['id']) ?>">
-                        <?=  htmlspecialchars($row['name']) ?>
+                        <?=  htmlspecialchars($row['job']) ?>
                     </option>
                     <?php
                     endforeach;
