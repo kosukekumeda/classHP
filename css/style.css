@@ -89,36 +89,7 @@ li {
 
 
 
-/* responsive = */
-@media screen and (max-width: 768px) {
-    /* 768px以下の画面サイズで適用されるスタイル */
-    /* フォントサイズを小さくする (ChatGPT参考)*/
-    .site-title {
-        width: auto;
-        font-size: 1.2em;
-        padding: .5rem;
-    }
-    .navi ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .navi ul li {
-        margin-left: 0;
-    }
-    .wrapper {
-        padding: 1em 2%;
-    }
-    .container {
-        padding: 2rem;
-    }
-    .section-title {
-        font-size: 1.2em;
-    }
-    .catchphrase {
-        font-size: .8em;
-        left: 10%;
-    }
-}
+
 
 .navi a {
     position: relative;
@@ -588,3 +559,41 @@ li {
         transform: translateX(0%);
       }
     }
+
+
+    /* responsive = */
+@media screen and (max-width: 768px) {
+    /* 768px以下の画面サイズで適用されるスタイル */
+    /* フォントサイズを小さくする (ChatGPT参考)*/
+    #mainvisual img {
+        width: 100%;
+        max-width: inherit;
+        height: inherit;
+        object-fit: contain;
+    }
+    .site-title {
+        width: auto;
+        font-size: 1.2em;
+        padding: .5rem;
+    }
+    .navi ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .navi ul li {
+        margin-left: 0;
+    }
+    .wrapper {
+        padding: 1em 2%;
+    }
+    .container {
+        padding: 2rem;
+    }
+    .section-title {
+        font-size: 1.2em;
+    }
+    .catchphrase {
+        font-size: .8em;
+        left: 10%;
+    }
+}
