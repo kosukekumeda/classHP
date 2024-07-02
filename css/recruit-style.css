@@ -221,6 +221,7 @@ li {
     background: var(--hover-color);
 }
 .btn-square-raised {
+    margin-top: 10px;
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
