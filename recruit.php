@@ -90,11 +90,13 @@
                 </select>
                 <button type="submit" class="submit">All Search</button>
                 <br>
+                <p class="back_button"><a href="recruit.php"class="btn-square-raised">Back</a></p>
+                <br>
             </form>
         </div>
         <!-- ここまで -->
     </div>
-    <p class="back_button"><a href="recruit.php"class="btn-square-raised">Back</a></p>
+    
     </section>
     
     <!-- =========== ここまでコピペ ========== -->
