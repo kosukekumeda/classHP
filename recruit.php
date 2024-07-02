@@ -95,5 +95,6 @@
     </div>
     </section>
     <!-- =========== ここまでコピペ ========== -->
+    <p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>
 </body>
 </html>

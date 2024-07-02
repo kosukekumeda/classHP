@@ -87,5 +87,6 @@ $recruits = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
             <?php endif; ?>
         </section>
+        <p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>
 </body>
 </html>
