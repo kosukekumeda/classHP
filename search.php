@@ -1,9 +1,9 @@
 <?php
 // データベース接続情報
 $host = 'localhost';
-$dbname = 'recruit_info';
-$user = 'classmate';
-$password = 'testpass';
+$dbname = 'xs527372_hpapp';
+$user = 'xs527372_hpapp';
+$password = 'kosuke1205';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
