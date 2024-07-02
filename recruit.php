@@ -39,6 +39,16 @@
                 <label for="job" class="label">job:</label>
                 <select name="job" id="job" class="select">
                     <option value="">選択してください</option>
+                    <option value="1">開発エンジニア(SE)</option>
+                    <option value="2">アプリケーションエンジニア</option>
+                    <option value="3">プログラマー</option>
+                    <option value="4">組込みエンジニア</option>
+                    <option value="5">開発エンジニア(WEBエンジニア)</option>
+                    <option value="6">フロントエンドエンジニア</option>
+                    <option value="7">バックエンドエンジニア</option>
+                    <option value="8">WEBデザイナー</option>
+                    <option value="9">インフラエンジニア</option>
+                    <option value="10">サーバーエンジニア</option>
                     
                     <?php
                     // データベース接続情報
