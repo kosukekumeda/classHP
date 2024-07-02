@@ -52,10 +52,6 @@
                     
                     <?php
 
-
-
-
-
                     // データベース接続情報
                     $host = 'localhost';
                     $dbname = 'xs527372_hpapp';
