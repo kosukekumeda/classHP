@@ -34,7 +34,6 @@
                 </select>
                 <br>
                 <button type="submit" class="submit">Search</button>
-                <p class="back_button"><a href="index.php"class="btn-square-raised">Back</a></p>
                 </form>
             <form action="search.php">
                 <label for="job" class="label">job:</label>
@@ -52,11 +51,16 @@
                     <option value="10">サーバーエンジニア</option>
                     
                     <?php
+
+
+
+
+
                     // データベース接続情報
                     $host = 'localhost';
-                    $dbname = 'recruit_info';
-                    $user = 'classmate';
-                    $password = 'testpass';
+                    $dbname = 'xs527372_hpapp';
+                    $user = 'xs527372_hpapp';
+                    $password = 'kosuke1205';
                     try {
                         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $password);
                         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
