@@ -95,6 +95,7 @@
         <!-- ここまで -->
     </div>
     </section>
+    <p class="back_button"><a href="recruit.php"class="btn-square-raised">Back</a></p>
     <!-- =========== ここまでコピペ ========== -->
 </body>
 </html>
